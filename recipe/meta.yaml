@@ -1,5 +1,5 @@
 {% set name = "multispaeti" %}
-{% set version = "0.1.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/multispaeti-{{ version }}.tar.gz
-  sha256: 4e5934dfa58edef2755d12ce70b6e06105afa4e5cbf2bc5302770d4b27c444d6
+  sha256: 99982251fcbe643a660433fe51f81ecf79f02f0960ca16974f805f9ce910f9f9
 
 build:
   noarch: python
