@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "multispaeti" %}
 {% set version = "1.0.1" %}
 
@@ -6,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/multispaeti-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/multispaeti-{{ version }}.tar.gz
   sha256: 4d0d42061bc621a626a1ee55e0a9eae62ac650945d5e77ac8dae7cb255269b13
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=61.0.0
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - matplotlib-base
     - numpy >=1.21
     - scikit-learn
@@ -34,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/HiDiHlabs/multiSPAETI
