@@ -1,6 +1,6 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "multispaeti" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/multispaeti-{{ version }}.tar.gz
-  sha256: 841820724c12bc0d102699860cfaee8417bc90df0c9307e5645447ee25f1abec
+  sha256: 6b0e16db9b79cc0ba12b74ce538dfa6a207f91dbdb271ba6b2bdaa3f0d5a9534
 
 build:
   noarch: python
@@ -23,10 +23,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - matplotlib-base >=3.6
-    - numpy >=1.23
-    - scikit-learn >=1.1
-    - scipy >=1.9
+    - matplotlib-base >=3.8
+    - numpy >=1.25
+    - scikit-learn >=1.6
+    - scipy >=1.11
 
 test:
   imports:
