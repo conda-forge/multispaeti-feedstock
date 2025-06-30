@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "multispaeti" %}
 {% set version = "1.2.0" %}
 
@@ -23,10 +23,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - matplotlib-base >=3.6
-    - numpy >=1.23
-    - scikit-learn >=1.1
-    - scipy >=1.9
+    - matplotlib-base >=3.8
+    - numpy >=1.25
+    - scikit-learn >=1.6
+    - scipy >=1.11
 
 test:
   imports:
